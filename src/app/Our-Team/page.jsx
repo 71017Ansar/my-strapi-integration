@@ -17,18 +17,18 @@ const Page = () => {
     const getTeamData = async () => {
       const teamData = await fetchData();
       setTeam(teamData);
-      setLoading(false); // Set loading to false once the data is fetched
+      setLoading(false); 
     };
 
     getTeamData();
-  }, []); // Empty dependency array ensures this runs once when the component mounts
+  }, []); 
 
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
         <div className="text-2xl text-gray-700">Loading...</div>
       </div>
-    ); // Show loading message while data is being fetched
+    ); 
   }
 
   return (
